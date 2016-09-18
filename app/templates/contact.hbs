@@ -1,0 +1,17 @@
+<h1>Contact</h1>
+
+<div>
+  {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+</div>
+<br />
+<div>
+  {{textarea value=message placeholder="Your message. (At least 5 characters.)" rows="7" class="form-control"}}
+</div>
+<br />
+<div>
+    <button class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'sendMessage'}}>Send message</button>
+</div>
+{{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+{{/if}}
+<br/><br/>
